@@ -1,0 +1,552 @@
+*,
+::after,
+::before {
+    box-sizing: border-box
+}
+
+html {
+    overflow-x: hidden;
+    font-size: 62.5%
+}
+
+body {
+    background-color: #fbfbfc;
+    margin: 0;
+    font-size: 1.6rem
+}
+
+.container {
+    max-width: 1115px;
+    margin: 0 auto
+}
+
+@media (max-width:1115px) {
+    .container {
+        margin: 0 1rem
+    }
+}
+
+a,
+button,
+input {
+    cursor: pointer
+}
+
+:not(i),
+:not(i)::after,
+:not(i)::before {
+    font-family: "Noto Sans", sans-serif
+}
+
+.d-flex {
+    display: flex;
+    align-items: center
+}
+
+.jcb {
+    justify-content: space-between
+}
+
+.mainHeading {
+    font-size: 2rem;
+    color: #333;
+    text-transform: capitalize;
+    position: relative;
+    margin-left: 2rem
+}
+
+.mainHeading:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -2rem;
+    width: .9rem;
+    height: 2.9rem;
+    border-radius: 6px;
+    background-color: #ae7129;
+    transform: translate(0, -50%)
+}
+
+.nav {
+    padding: 2.1rem 0
+}
+
+.nav_logo img {
+    width: 5rem;
+    margin-right: 1rem
+}
+
+.nav_logo span {
+    font-size: 1.4rem
+}
+
+.nav_btns a:first-of-type {
+    margin-right: 3rem
+}
+
+.nav_btns a i:nth-of-type(1) {
+    background-color: #fff;
+    color: #026bb0;
+    padding: 1.7rem;
+    border-radius: 1.3rem;
+    font-size: 1.7rem
+}
+
+.nav_btns a i:nth-of-type(2) {
+    font-size: 1.7rem;
+    margin-left: 1rem;
+    color: #959595
+}
+
+.nav_btns a.notifications i {
+    position: relative
+}
+
+.nav_btns a.notifications i:after {
+    content: "";
+    position: absolute;
+    top: 38%;
+    right: 9px;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    background-color: #ff3c3c;
+    transform: translate(0, -50%)
+}
+
+.profileNav {
+    background-color: #fff;
+    padding: 1.5rem 0
+}
+
+@media (max-width:782px) {
+    .profileNav .avatar {
+        align-self: flex-start
+    }
+}
+
+.profileNav .avatar img {
+    width: 8.4rem;
+    margin-right: 1rem
+}
+
+.profileNav .avatar h4 {
+    font-size: 2.8rem;
+    font-weight: 700
+}
+
+@media (max-width:782px) {
+    .profileNav .childs {
+        flex-direction: column
+    }
+}
+
+.profileNav .childs .child {
+    transition: all .3s ease;
+    padding: 1rem;
+    border: 1px solid #f0f0f1;
+    margin-right: 2rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer
+}
+
+@media (max-width:782px) {
+    .profileNav .childs .child {
+        margin-bottom: 1rem
+    }
+}
+
+.profileNav .childs .child img {
+    width: 3.2rem;
+    margin-right: 1rem
+}
+
+.profileNav .childs .child span {
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    color: #707070;
+    font-weight: 600;
+    transition: all .3s ease
+}
+
+.profileNav .childs .child:hover {
+    background-color: rgba(2, 107, 176, .1);
+    border-color: rgba(2, 107, 176, .1)
+}
+
+.profileNav .childs .child:hover span {
+    color: #026bb0
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #026bb0;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    padding: 1.2rem 2.6rem;
+    text-transform: capitalize;
+    background-color: transparent;
+    color: #026bb0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .3s ease
+}
+
+.btn i {
+    margin-right: 1rem
+}
+
+.btn:hover {
+    background-color: rgba(2, 107, 176, .1)!important;
+    border-color: rgba(2, 107, 176, .1)
+}
+
+.footer {
+    background-color: #fff;
+    margin-top: 15rem;
+    padding: 1rem 0
+}
+
+.footer p {
+    font-size: 1.4rem;
+    color: #707070;
+    margin: 0
+}
+
+.statistics {
+    margin-top: 5rem
+}
+
+.statistics_info {
+    justify-content: space-evenly;
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 4rem 0
+}
+
+.statistics_info .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 20px
+}
+
+.statistics_info .card .percent {
+    position: relative;
+    width: 77px;
+    height: 8rem
+}
+
+.statistics_info .card .percent .dot {
+    content: "";
+    position: absolute;
+    top: 49%;
+    left: -2px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 2px solid #4a3274;
+    background-color: #fff;
+    z-index: 1
+}
+
+.statistics_info .card svg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-180deg)
+}
+
+.statistics_info .card svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #f0f0f0;
+    stroke-width: 2px
+}
+
+.statistics_info .card svg circle:last-of-type {
+    stroke-dasharray: 232px;
+    stroke-dashoffset: calc(232px - 232px * (var(--percent))/ 100);
+    stroke: #4a3274
+}
+
+.statistics_info .card .number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.statistics_info .card .number h3 {
+    font-weight: 500;
+    font-size: 2rem
+}
+
+.statistics_info .card .title {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #333
+}
+
+.statistics_info .card .title h3 {
+    font-weight: 500;
+    margin: 1.5rem 0 1rem
+}
+
+.statistics_info .card .title p {
+    font-weight: 400;
+    margin: 0
+}
+
+.statistics_info .card:nth-child(2) svg circle:last-of-type {
+    stroke: #739500
+}
+
+.statistics_info .card:nth-child(2) .number {
+    color: #739500
+}
+
+.statistics_info .card:nth-child(2) .dot {
+    border-color: #739500
+}
+
+.statistics_info .card:nth-child(3) svg circle:last-of-type {
+    stroke: #950086
+}
+
+.statistics_info .card:nth-child(3) .number {
+    color: #950086
+}
+
+.statistics_info .card:nth-child(3) .dot {
+    border-color: #950086
+}
+
+.homework {
+    margin-top: 5rem
+}
+
+.homework_chart {
+    background: #fff;
+    border-radius: 12px;
+    padding: 4rem;
+    height: 400px
+}
+
+@media (max-width:782px) {
+    .homework_chart #canvas {
+        height: 250px!important
+    }
+}
+
+@media (max-width:782px) {
+    .homework_chart {
+        padding: 0;
+        height: auto;
+        padding-bottom: 3rem
+    }
+}
+
+.homework .btn {
+    border-color: #e8e8e8;
+    background-color: #fff;
+    font-weight: 500
+}
+
+.homework .btn i {
+    margin-right: 0;
+    margin-left: .5rem
+}
+
+.Attendence {
+    margin-top: 5rem
+}
+
+.Attendence .month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 300;
+    font-size: 1.8rem
+}
+
+.Attendence .month_nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: #fff;
+    color: #026bb0;
+    width: 38px;
+    height: 38px;
+    border-radius: 25%;
+    transition-duration: .2s;
+    position: relative
+}
+
+.Attendence .month .monthYear_name {
+    margin: 0 1rem
+}
+
+.Attendence_calendar {
+    width: 100%;
+    max-width: 1055px;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    padding: 3rem 2.5rem 2rem;
+    border-radius: 20px
+}
+
+.Attendence_calendar .days {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(7, 1fr);
+    color: #999;
+    font-weight: 600;
+    margin-bottom: 15px
+}
+
+.Attendence_calendar .days span {
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    font-size: 1.4rem
+}
+
+.Attendence_calendar .dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr)
+}
+
+.Attendence_calendar .dates button {
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+    background: rgba(120, 181, 23, .1);
+    font-size: 1.8rem;
+    justify-self: center;
+    align-self: center;
+    width: 97%;
+    height: 50px;
+    margin-bottom: 5px;
+    color: #333;
+    transition-duration: .2s;
+    font-weight: 400
+}
+
+.Attendence_calendar .dates button:first-child {
+    grid-column: 3
+}
+
+.Attendence_calendar .dates button.pink {
+    background-color: rgba(229, 29, 29, .1)
+}
+
+.Attendence_calendar .dates button.grey {
+    background-color: rgba(51, 51, 51, .1)
+}
+
+.gradebook {
+    margin-top: 4rem;
+    color: #333
+}
+
+@media (max-width:1001px) {
+    .gradebook {
+        overflow-x: scroll
+    }
+}
+
+.gradebook_container {
+    display: flex;
+    min-width: 1000px
+}
+
+.gradebook_col {
+    width: 19%
+}
+
+.gradebook_col:not(:last-of-type) {
+    margin-right: .3rem
+}
+
+.gradebook_col:first-of-type {
+    width: 24%
+}
+
+.gradebook_col:first-of-type span {
+    font-weight: 500
+}
+
+.gradebook_col:first-of-type .gradebook_col_list {
+    text-align: start
+}
+
+.gradebook_col h2,
+.gradebook_col h4 {
+    margin-bottom: 2rem
+}
+
+.gradebook_col h4 {
+    font-weight: 400;
+    text-align: center
+}
+
+.gradebook_col_list {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 1px solid #e9e9e9;
+    text-align: center
+}
+
+.gradebook_col_list>span {
+    font-size: 1.6rem;
+    margin: 0 2rem;
+    padding: 2rem
+}
+
+.gradebook_col_list>span .red {
+    color: red;
+    font-weight: 400
+}
+
+.gradebook_col_list>span:not(:last-of-type) {
+    border-bottom: 1px solid #e9e9e9
+}
+
+.gradebook .total_marks {
+    min-width: 1000px;
+    margin-top: .3rem;
+    background-color: #fff;
+    padding: 2rem 4rem;
+    border-radius: 20px;
+    border: 1px solid #e9e9e9
+}
+
+.gradebook .total_marks h2,
+.gradebook .total_marks h5 {
+    font-size: 2rem;
+    margin: 0
+}
+
+.gradebook .total_marks h2,
+.gradebook .total_marks span {
+    font-weight: 500
+}
+
+.gradebook .total_marks h5 {
+    font-weight: 400
+}
